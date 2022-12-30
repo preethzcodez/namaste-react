@@ -55,9 +55,11 @@ The **`crossorigin`** attribute is used in the script tag to specify whether a s
 
 The **`crossorigin`** attribute has the following values:
 
-* **`anonymous`**: This value indicates that the script should be loaded using CORS, but the server does not need to include the appropriate CORS headers in the response. This allows the script to be loaded, but it may not be possible to access the content of the script from the page.
+* **`anonymous`**: Request uses CORS headers and credentials flag is set to **`same-origin`**. There is no exchange of user credentials via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
 
-* **`use-credentials`**: This value indicates that the script should be loaded using CORS, and the server must include the appropriate CORS headers in the response to allow the script to be accessed from the page.
+* **`use-credentials`**: Request uses CORS headers, credentials flag is set to **`include`** and user credentials are always included.
+
+* **""**: Setting the attribute name to an empty value, like **`crossorigin`** or **`crossorigin=""`**, is the same as anonymous.
 
 If the **`crossorigin`** attribute is not specified, the script is loaded without using CORS.
 
