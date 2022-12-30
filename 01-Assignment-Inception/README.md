@@ -128,8 +128,8 @@ Syntax:
     <img src="https://user-images.githubusercontent.com/7704934/210104932-3b9d59c9-3fd6-488f-a2e5-6e650915748c.png"> 
 </p>
 
-| **`async`**   | **`defer`**         | 
-| ------------- |:-------------------:| 
+| **`async`**   | **`defer`**       | 
+| ------------- |-------------------| 
 | **`async`** blocks the parsing of the page.     | **`defer`** never block the page. | 
 | Asynchronous scripts don’t wait for each other. So if a smaller script is second in the order, it will be loaded before the previous longer one.      | Deferred scripts maintain their relative order which means the first script will be loaded first while all other below it will have to wait.      | 
 | The execution of scripts begins by pause parsing. | However, the execution of scripts begins only after parsing is completely finished but before the documents’s DOMContentLoadedevent.      | 
