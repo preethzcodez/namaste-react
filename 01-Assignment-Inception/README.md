@@ -70,14 +70,14 @@ Here is an example of how the crossorigin attribute can be used in a script tag:
 ```
 In this example, the script is loaded using CORS, but the server does not need to include the appropriate CORS headers in the response.
 
-### 06. What is diference between React and ReactDOM?
-React is a JavaScript library for building user interfaces, while ReactDOM is a JavaScript library that provides DOM (Document Object Model) specific methods for rendering React components.
+### 06. What is difference between React and ReactDOM?
+**React** is a JavaScript library for building user interfaces, while ReactDOM is a JavaScript library that provides DOM (Document Object Model) specific methods for rendering React components.
 
-React is designed to be used for building reusable UI components that can be easily shared and reused across different applications. It provides a declarative approach to building user interfaces, which means that you can describe the UI you want to see, and React will automatically update the UI to reflect your desired state.
+**React** is designed to be used for building reusable UI components that can be easily shared and reused across different applications. It provides a declarative approach to building user interfaces, which means that you can describe the UI you want to see, and React will automatically update the UI to reflect your desired state.
 
-ReactDOM is a separate library that provides specific methods for rendering React components to the DOM. It provides a simple way to take a React component and render it to a DOM element in the browser.
+**ReactDOM** is a separate library that provides specific methods for rendering React components to the DOM. It provides a simple way to take a React component and render it to a DOM element in the browser.
 
-Here is an example of how React and ReactDOM can be used together to render a simple component:
+Here is an example of how **React** and **ReactDOM** can be used together to render a simple component:
 
 ```
 import React from 'react';
@@ -91,7 +91,7 @@ ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
 In this example, the HelloWorld component is imported from the react library, and the render method is imported from the react-dom library. The render method is used to render the HelloWorld component to the DOM element with the ID root.
 
-To summarize, React is a library for building user interfaces, while ReactDOM is a library that provides specific methods for rendering React components to the DOM.
+To summarize, **React** is a library for building user interfaces, while **ReactDOM** is a library that provides specific methods for rendering React components to the DOM.
 
 ### 07. What is difference between react.development.js and react.production.js files via CDN?
 The **react.development.js** and **react.production.js** files are different versions of the React JavaScript library that are optimized for different environments.
