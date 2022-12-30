@@ -124,7 +124,9 @@ Syntax:
 ```
 <script defer src = "script.js"></script>
 ```
-![async vs defer drawio](https://user-images.githubusercontent.com/7704934/210104932-3b9d59c9-3fd6-488f-a2e5-6e650915748c.png)
+<p align="center" width="100%">
+    <img src="https://user-images.githubusercontent.com/7704934/210104932-3b9d59c9-3fd6-488f-a2e5-6e650915748c.png"> 
+</p>
 
 | **`async`**   | **`defer`**         | 
 | ------------- |:-------------------:| 
