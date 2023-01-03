@@ -159,6 +159,37 @@ Here is an example of a "package.json" file with a "browserslist" property:
 ```
 The "browserslist" property in "package.json" is used by tools such as Autoprefixer and Babel to determine which browser features to support and which polyfills or transpilation to apply. It is a flexible and powerful way to specify the target browsers for an application, and it can help to ensure that the application is compatible with a wide range of browser versions.
 
-### 15. vite, webpack, parcel
+### 15. Vite, Webpack, Parcel
+Vite, Webpack, and Parcel are all tools that are used for building and bundling JavaScript applications. They are commonly used to process and optimize the code and assets of an application, and to create a distributable version that can be deployed to a production environment.
+
+Here is a brief overview of each tool:
+
+- **Vite** is a modern build tool that is designed to be lightweight and fast. It uses native ES modules and leverages the capabilities of modern browsers to deliver a fast and efficient build process. Vite is particularly well-suited for building small to medium-sized applications and for hot module replacement (HMR).
+
+- **Webpack** is a powerful and flexible build tool that is widely used for building JavaScript applications. It can be configured to perform a wide range of tasks, such as transpiling code, minifying files, and bundling assets. Webpack has a large and active community, and it is supported by a wide range of plugins and integrations.
+
+- **Parcel** is a build tool that is designed to be easy to use and fast. It uses a zero-configuration approach and can automatically infer the configuration for many tasks, such as transpiling code and bundling assets. Parcel is a good choice for simple projects that do not require a lot of custom configuration.
+
+All three tools are capable of building and bundling JavaScript applications, and they each have their own strengths and weaknesses. The right choice for your project will depend on your specific requirements and preferences.
+
 ### 16. ^ - caret and ~ - tilda
+~version “**Approximately equivalent to version**”, will update you to all future patch versions, without incrementing the minor version. 
+~1.2.3 will use releases from 1.2.3 to <1.3.0.
+
+^version “**Compatible with version**”, will update you to all future minor/patch versions, without incrementing the major version. 
+^2.3.4 will use releases from 2.3.4 to <3.0.0.
+
 ### 17. Script types in html
+This attribute indicates the type of script represented. The value of this attribute will be one of the following:
+
+- **Attribute is not set (default), an empty string, or a JavaScript MIME type**
+Indicates that the script is a "classic script", containing JavaScript code. Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type. JavaScript MIME types are listed in the [IANA media types specification](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+
+- **module**
+This value causes the code to be treated as a JavaScript module. The processing of the script contents is deferred. The charset and defer attributes have no effect. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
+
+- **importmap**
+This value indicates that the body of the element contains an import map. The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing JavaScript modules.
+
+- **Any other value**
+The embedded content is treated as a data block, and won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. All of the other attributes will be ignored, including the src attribute.
