@@ -50,6 +50,22 @@ npx my-binary
 npx can also be used to run packages that are not installed locally in your project. If you specify a package name that is not found in the node_modules/.bin directory, npx will automatically download and install the package from the npm registry, and then run the specified binary. This can be useful for trying out a package or running one-off scripts without the need to install it globally or add it to your project as a dependency.
 
 ### 05. What is difference between dependencies vs devDependencies?
+In an npm project, dependencies are the packages that are required for the application to run in production. These packages should be installed on the production environment and are listed in the "dependencies" field of the package.json file.
+
+On the other hand, devDependencies are the packages that are only required for development or testing purposes. These packages are not needed in the production environment and should not be installed on it. They are listed in the "devDependencies" field of the package.json file.
+
+One common use case for devDependencies is to include tools and libraries that are used for building, testing, and linting the code, such as linters, test runners, and build tools. These tools are only needed during the development process and are not needed when the application is deployed to production.
+
+It is generally a good practice to keep the production dependencies separate from the development dependencies, as it helps to keep the production environment lean and focused on the core functionality of the application. When you are installing packages in a project, you can use the "--save" flag or without any flags to add the package to the dependencies, or the "--save-dev" or "-D" flag to add it to the devDependencies.
+
+For example, to install a package called "babel" as a dependency, you can use the following command:
+
+```npm install --save babel``` or ```npm install babel```
+
+To install the same package as a devDependency, you can use the following command:
+
+```npm install --save-dev babel``` or ```npm install -D babel```
+
 ### 06. What is Tree Shaking?
 ### 07. What is Hot Module Replacement?
 ### 08. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
