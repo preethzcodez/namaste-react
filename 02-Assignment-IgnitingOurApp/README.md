@@ -32,7 +32,23 @@ There are several reasons why developers use module bundlers:
 Parcel and Webpack are two of the most popular module bundlers. Both have their own strengths and are suitable for different types of projects. Developers can choose the one that best fits their needs.
 
 ### 03. What is .parcel-cache?
+".parcel-cache" is a directory that is created by the module bundler Parcel when it runs. It is used to store the files that have been processed by Parcel, as well as any intermediate files that are generated during the build process. The cache is used to speed up subsequent builds by allowing Parcel to reuse the previously processed and optimized files, rather than having to start from scratch each time.
+
+For example, if you are using Parcel to build a JavaScript application, it will create the ".parcel-cache" directory in the root of your project. Inside the cache directory, you will find a number of subdirectories that contain the files that have been processed by Parcel. These files may include the original source code, as well as any transformed or optimized versions of the code that were created during the build process.
+
+The ".parcel-cache" directory is usually hidden by default, but you can view it by changing your operating system's settings to show hidden files. It is generally not recommended to modify the contents of the cache, as it is used by Parcel to optimize the build process and may cause issues if the cache is deleted or altered.
+
 ### 04. What is npx?
+npx is a command-line tool that is included with npm. It is used to execute npm package binaries.
+
+When you install an npm package that has a binary associated with it, the binary is typically added to the node_modules/.bin directory of your project. To run the binary, you would normally need to specify the full path to the binary, which can be cumbersome. With npx, you can run the binary by simply using its name. npx will automatically look in the node_modules/.bin directory for the binary and execute it.
+
+For example, if you have installed an npm package called "my-package" that includes a binary called "my-binary", you can run the binary with the following command:
+```
+npx my-binary
+```
+npx can also be used to run packages that are not installed locally in your project. If you specify a package name that is not found in the node_modules/.bin directory, npx will automatically download and install the package from the npm registry, and then run the specified binary. This can be useful for trying out a package or running one-off scripts without the need to install it globally or add it to your project as a dependency.
+
 ### 05. What is difference between dependencies vs devDependencies?
 ### 06. What is Tree Shaking?
 ### 07. What is Hot Module Replacement?
