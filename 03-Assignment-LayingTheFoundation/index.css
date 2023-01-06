@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.title {
+    border: 8px solid skyblue;
+    padding: 0px 16px;
+    background-color: whitesmoke;
+}
+
+.title h4 {
+    color: red;
+}
+
+.header {
+    background-color: skyblue;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    border: none;
+    border-radius: 4px;
+    min-height: 15px;
+    min-width: 450px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.search-box:focus-visible {
+    outline: none;
+}
+
+.user {
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+}
