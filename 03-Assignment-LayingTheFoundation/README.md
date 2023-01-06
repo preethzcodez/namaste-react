@@ -56,7 +56,7 @@ Here are some other options for the type attribute:
 
 It's worth noting that the type attribute is not necessary in modern browsers, as they can usually determine the correct MIME type for the script based on the file extension. However, it is still a good practice to include the type attribute for the sake of backwards compatibility and to ensure that your code works correctly in all browsers.
 
-### 04. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+### 04. {TitleComponent} vs {```<TitleComponent/>```} vs {```<TitleComponent></TitleComponent>```} in JSX
 In JSX, {TitleComponent} is a placeholder for a JavaScript expression that evaluates to a React component. This could be a reference to a named component that you have defined elsewhere in your code, or it could be an anonymous function that returns a React component.
 
 For example, the following code defines a named component called TitleComponent and then uses it in JSX:
