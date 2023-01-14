@@ -25,16 +25,16 @@ Many React tutorials and examples use ES6 syntax, so it is a recommended to have
 
 It is possible to use React with older versions of JavaScript, but using ES6 can make your code more readable and maintainable.
 
-### 03. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
-In JSX, the syntax {TitleComponent} is used to reference a variable or import that holds a React component. It is called a component reference.
+### 03. ```{TitleComponent}``` vs ```{<TitleComponent/>}``` vs ```{<TitleComponent></TitleComponent>}``` in JSX
+In JSX, the syntax ```{TitleComponent}``` is used to reference a variable or import that holds a React component. It is called a component reference.
 
-The syntax {<TitleComponent/>} and {<TitleComponent></TitleComponent>} is used to create and render an instance of the TitleComponent component. It's called JSX element.
+The syntax ```{<TitleComponent/>}``` and ```{<TitleComponent></TitleComponent>}``` is used to create and render an instance of the TitleComponent component. It's called JSX element.
 
 The difference between the two is the way they handle self-closing tags.
 
-{<TitleComponent/>} is a shorthand for {<TitleComponent></TitleComponent>} and it is used when a component does not have any children.
+```{<TitleComponent/>}``` is a shorthand for ```{<TitleComponent></TitleComponent>}``` and it is used when a component does not have any children.
 
-So {<TitleComponent/>} and {<TitleComponent></TitleComponent>} are equivalent and both will create and render an instance of the TitleComponent component.
+So ```{<TitleComponent/>}``` and ```{<TitleComponent></TitleComponent>}``` are equivalent and both will create and render an instance of the TitleComponent component.
 
 It's important to note that all JSX elements must be closed, whether they have children or not.
 
