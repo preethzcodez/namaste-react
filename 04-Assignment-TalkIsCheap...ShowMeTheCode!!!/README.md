@@ -25,16 +25,16 @@ Many React tutorials and examples use ES6 syntax, so it is a recommended to have
 
 It is possible to use React with older versions of JavaScript, but using ES6 can make your code more readable and maintainable.
 
-### 03. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
-In JSX, the syntax {TitleComponent} is used to reference a variable or import that holds a React component. It is called a component reference.
+### 03. ```{TitleComponent}``` vs ```{<TitleComponent/>}``` vs ```{<TitleComponent></TitleComponent>}``` in JSX
+In JSX, the syntax ```{TitleComponent}``` is used to reference a variable or import that holds a React component. It is called a component reference.
 
-The syntax {<TitleComponent/>} and {<TitleComponent></TitleComponent>} is used to create and render an instance of the TitleComponent component. It's called JSX element.
+The syntax ```{<TitleComponent/>}``` and ```{<TitleComponent></TitleComponent>}``` is used to create and render an instance of the TitleComponent component. It's called JSX element.
 
 The difference between the two is the way they handle self-closing tags.
 
-{<TitleComponent/>} is a shorthand for {<TitleComponent></TitleComponent>} and it is used when a component does not have any children.
+```{<TitleComponent/>}``` is a shorthand for ```{<TitleComponent></TitleComponent>}``` and it is used when a component does not have any children.
 
-So {<TitleComponent/>} and {<TitleComponent></TitleComponent>} are equivalent and both will create and render an instance of the TitleComponent component.
+So ```{<TitleComponent/>}``` and ```{<TitleComponent></TitleComponent>}``` are equivalent and both will create and render an instance of the TitleComponent component.
 
 It's important to note that all JSX elements must be closed, whether they have children or not.
 
@@ -59,7 +59,7 @@ Keys are used by React to keep track of the elements in a list, so that when the
 ### 10. Can we use index as keys in React?
 It is not recommended to use the index of an element as a key in React, because it can lead to unexpected behavior when the list is re-ordered or elements are added or removed. Instead, it's recommended to use a unique identifier that is stable across renders, such as an ID from a database or a UUID.
 
-### 11. What is props in React? Ways to
+### 11. What is props in React? 
 Props (short for properties) are a way to pass data from a parent component to a child component. Props are passed as attributes to a component in JSX. For example: ```<MyComponent name="John" age={30} />```
 
 ### 12. What is a Config Driven UI ?
