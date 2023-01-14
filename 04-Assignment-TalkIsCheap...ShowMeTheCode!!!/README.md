@@ -59,7 +59,7 @@ Keys are used by React to keep track of the elements in a list, so that when the
 ### 10. Can we use index as keys in React?
 It is not recommended to use the index of an element as a key in React, because it can lead to unexpected behavior when the list is re-ordered or elements are added or removed. Instead, it's recommended to use a unique identifier that is stable across renders, such as an ID from a database or a UUID.
 
-### 11. What is props in React? Ways to
+### 11. What is props in React? 
 Props (short for properties) are a way to pass data from a parent component to a child component. Props are passed as attributes to a component in JSX. For example: ```<MyComponent name="John" age={30} />```
 
 ### 12. What is a Config Driven UI ?
