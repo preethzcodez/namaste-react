@@ -1,14 +1,19 @@
-import logo from "./assets/logo.png";
-import user from "./assets/user.png";
+import logo from "../assets/logo.png";
+import food from "../assets/food.png";
 
 const HeaderComponent = () => {
-    return (
-        <div className="header">
-            <img src={logo} className="logo" alt="logo" />
-            <input className="search-box" type="text" placeholder="Search"/>
-            <img src={user} className="user" alt="user"/>
-        </div>
-    )
-}
+  return (
+    <div className="nav-bar">
+      <img src={logo} className="logo" alt="logo" />
+      <img src={food} className="food-img" alt="food-item" />
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Cart</li>
+      </ul>
+    </div>
+  );
+};
 
 export default HeaderComponent;
