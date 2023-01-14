@@ -1,82 +1,66 @@
-# NAMASTE REACT - ASSIGNMENT 03 - LAYING THE FOUNDATION
+# NAMASTE REACT - ASSIGNMENT 04 - TALK IS CHEAP... SHOW ME THE CODE !!!
 
 ## CODING
-- Create a Nested header Element using React.createElement(h1,h2,h3 inside a div with class “title”)
-- - Create the same element using JSX
-- - Create a functional component of the same with JSX
-- - Pass attributes into the tag in JSX
-- - Composition of Component(Add a component inside another)
-- - {TitleComponent} vs {```<TitleComponent/>```} vs {```<TitleComponent></TitleComponent>```} in JSX
-- Create a Header Component from scratch using Functional Components with JSX
-- - Add a Logo on left
-- - Add a search bar in middle
-- - Add User icon on right
-- - Add CSS to make it look nice
+- Build a Food Ordering App
+- Think of a cool name for your app
+- Build a AppLayout
+- Build a Header Component with Logo & Nav Items & Cart
+- Build a Body Component
+- - Build RestaurantList Component
+- - Build RestaurantCard Component
+- - - Use static data initially
+- - - Make your card dynamic(pass in props)
+- - - - Props - passing arguments to a function - Use Destructuring & Spread operator
+- - - Render your cards with dynamic data of restaurants
+- - - Use Array.map to render all the restaurants
 
 ## THEORY
 
-### 01. What is JSX?
-JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript code. It is used to define the structure of the user interface (UI) in a declarative way.
+### 01. Is JSX mandatory for React?
+No, JSX is not mandatory for React. However, it is a syntax extension for JavaScript that allows you to write HTML-like elements in your JavaScript code. It is used to describe the structure of a React component and is often used in combination with React to create user interfaces. While you can use React without JSX, many developers find it to be a convenient and powerful way to write React components.
 
-Here's an example of JSX:
-```
-const element = <h1>Hello, world!</h1>;
-```
-JSX is often used in combination with a library like React to build complex UI elements.
+### 02. Is ES6 mandatory for React?
+No, ES6 is not mandatory for React. However, it is a widely used version of JavaScript that includes many new features that can make your code more concise and easier to maintain.
+Many React tutorials and examples use ES6 syntax, so it is a recommended to have a basic understanding of it. Also, many features of ES6 are supported by modern browsers and JavaScript runtimes, so it's easier to use the features of ES6 for modern web development.
 
-When your code is compiled, the JSX is transformed into regular JavaScript code that the browser can understand.
+It is possible to use React with older versions of JavaScript, but using ES6 can make your code more readable and maintainable.
 
-### 02. Superpowers of JSX
-JSX has a few features that make it a powerful tool for building user interfaces:
+### 03. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+In JSX, the syntax {TitleComponent} is used to reference a variable or import that holds a React component. It is called a component reference.
 
-- It is **declarative**: You can write your UI using JSX and describe how it should look, rather than writing imperative code that manually updates the DOM. This can make your code more predictable and easier to understand.
+The syntax {<TitleComponent/>} and {<TitleComponent></TitleComponent>} is used to create and render an instance of the TitleComponent component. It's called JSX element.
 
-- It is **expressive**: JSX allows you to include expressions in your UI code, which makes it easier to create dynamic and interactive UIs.
+The difference between the two is the way they handle self-closing tags.
 
-- It is **reusable**: You can create reusable UI components using JSX, which can help you avoid repeating code and make your UI development more efficient.
+{<TitleComponent/>} is a shorthand for {<TitleComponent></TitleComponent>} and it is used when a component does not have any children.
 
-- It is **type-safe**: If you use a type checker like Flow or TypeScript with JSX, you can catch type errors at compile time, which can help you avoid runtime errors and improve the reliability of your code.
+So {<TitleComponent/>} and {<TitleComponent></TitleComponent>} are equivalent and both will create and render an instance of the TitleComponent component.
 
-- It **integrates seamlessly with modern JavaScript development tools**: JSX works well with build tools like Webpack and Babel, which can help you automate tasks like code transpilation, minification, and hot module reloading.
+It's important to note that all JSX elements must be closed, whether they have children or not.
 
-### 03. Role of type attribute in script tag? What options can I use there?
-The **type** attribute in a script tag specifies the type of script that is being used in the webpage. This attribute is optional, but it is a good practice to include it because it helps the browser process the script correctly and can also help protect against malicious code.
+### 04. How can I write comments in JSX?
+You can write comments in JSX by wrapping them in curly braces with two forward slashes. For example: {/* This is a comment */}
 
-The value of the **type** attribute should be set to the MIME type of the script. For example, the MIME type for JavaScript is **text/javascript**, so you would use **type="text/javascript"** in your script tag.
+### 05. What is <React.Fragment></React.Fragment> and <></> ?
+React.Fragment is a component that allows you to group a list of children without adding extra nodes to the DOM. It is useful when you want to return multiple elements from a component’s render method without adding an extra parent DOM node. <></> is a shorthand for <React.Fragment> and it's available since React 16.2.
 
-Here are some other options for the type attribute:
+### 06. What is Virtual DOM?
+The Virtual DOM is a lightweight representation of the actual DOM. React uses it to track changes in the user interface and to efficiently update the real DOM. When a component's state changes, React will update the corresponding parts of the virtual DOM, and then use a diffing algorithm to determine the minimal number of changes that need to be made to the actual DOM. This process is called reconciliation.
 
-- **text/ecmascript**: This is the MIME type for the ECMAScript programming language, which is the standard for modern JavaScript.
+### 07. What is Reconciliation in React?
+Reconciliation is the process of determining the changes that need to be made to the Virtual DOM in order to update the UI to match the current state. React uses a diffing algorithm to compare the current virtual tree with the new virtual tree, and then updates the real DOM with the minimal set of changes needed to bring the UI up to date.
 
-- **text/babel**: This is the MIME type for code that has been transpiled from JavaScript using the Babel transpiler.
+### 08. What is React Fiber?
+React Fiber is a new reconciliation algorithm introduced in React v16. It is a complete rewrite of the previous algorithm and is designed to improve the rendering performance of React applications by making updates more incremental and asynchronous. It also adds new features such as the ability to pause and abort renderings, and the ability to split renderings across multiple frames.
 
-- **text/jsx**: This is the MIME type for code written in JSX, a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript code.
+### 09. Why we need keys in React? When do we need keys in React?
+Keys are used by React to keep track of the elements in a list, so that when the list is updated, React can efficiently determine which elements have been added, removed, or moved. Keys should be unique and constant among the siblings, and It is recommended to use keys when the elements in a list have a unique identifier, such as an ID from a database.
 
-- **application/javascript**: This is another MIME type for JavaScript, and it is equivalent to text/javascript.
+### 10. Can we use index as keys in React?
+It is not recommended to use the index of an element as a key in React, because it can lead to unexpected behavior when the list is re-ordered or elements are added or removed. Instead, it's recommended to use a unique identifier that is stable across renders, such as an ID from a database or a UUID.
 
-It's worth noting that the type attribute is not necessary in modern browsers, as they can usually determine the correct MIME type for the script based on the file extension. However, it is still a good practice to include the type attribute for the sake of backwards compatibility and to ensure that your code works correctly in all browsers.
+### 11. What is props in React? Ways to
+Props (short for properties) are a way to pass data from a parent component to a child component. Props are passed as attributes to a component in JSX. For example: ```<MyComponent name="John" age={30} />```
 
-### 04. {TitleComponent} vs {```<TitleComponent/>```} vs {```<TitleComponent></TitleComponent>```} in JSX
-In JSX, {TitleComponent} is a placeholder for a JavaScript expression that evaluates to a React component. This could be a reference to a named component that you have defined elsewhere in your code, or it could be an anonymous function that returns a React component.
-
-For example, the following code defines a named component called TitleComponent and then uses it in JSX:
-```
-function TitleComponent() {
-  return <h1>Hello, world!</h1>;
-}
-
-const element = <div>{TitleComponent}</div>;
-```
-On the other hand, <TitleComponent/> and <TitleComponent></TitleComponent> are both examples of JSX tags that represent a React component. These tags will be compiled into a call to the React.createElement() function, which creates a new React element that can be rendered to the DOM.
-
-For example, the following code defines a named component called TitleComponent and then uses it in JSX:
-```
-function TitleComponent() {
-  return <h1>Hello, world!</h1>;
-}
-
-const element = <div><TitleComponent/></div>;
-```
-Both <TitleComponent/> and <TitleComponent></TitleComponent> are equivalent, and you can use either one. The self-closing form (<TitleComponent/>) is generally preferred because it is shorter and easier to read.
-
-It's worth noting that in JSX, all component names must be capitalized, regardless of whether they are being used as placeholders or as tags. This is because JSX uses a case-sensitive syntax, and all lowercase tags are treated as HTML elements by default.
+### 12. What is a Config Driven UI ?
+A Config Driven UI is a design pattern where the user interface is generated and configured by a set of external configuration files rather than hard-coded in the source code. This allows for more flexibility and ease of maintenance, as the UI can be updated without changing the codebase. It also allows for reusing components and creating custom UI solutions for different use cases by changing the configuration.
