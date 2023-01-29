@@ -1,5 +1,4 @@
-import { RESTAURANT_IMAGE_BASE_URL } from "../utils/constants";
-import ShimmerRestaurantCard from "./shimmer/ShimmerRestaurantCard";
+import { RESTAURANT_IMAGE_BASE_URL } from "../../utils/constants";
 
 const RestaurantCard = ({
   cloudinaryImageId,

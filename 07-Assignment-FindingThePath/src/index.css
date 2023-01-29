@@ -58,6 +58,11 @@ body {
     text-shadow: 0 2px 4px rgb(0 0 0 / 25%);
 }
 
+.nav-bar-menu > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav-bar-menu > button {
     border-radius: 16px;
     border: 2px solid #000;
