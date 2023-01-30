@@ -47,6 +47,7 @@ const Image = () => <img src="image.jpg" alt="image description" />;
 Console.log of useState: It will return an array with two elements, the first being the current state value, and the second being a function to update the state.
 
 Example: ```console.log(useState())```
+
 Output: ```[undefined, function updateState]```
 
 ### 03. How will useEffect behave if we don't add a dependency array ?
