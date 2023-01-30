@@ -33,10 +33,13 @@ const RestaurantCard = ({
           className="restaurant-card-rating-star-container"
           style={{ background: getRestaurantRatingColorCode(avgRating) }}
         >
-          <span class="material-symbols-outlined restaurant-card-rating-star-icon">
+          <span
+            className="material-symbols-outlined restaurant-card-rating-star-icon"
+            style={{ marginTop: -2 }}
+          >
             star
           </span>
-          <span style={{marginLeft: 2}}>{avgRating}</span>
+          <span style={{ marginLeft: 2 }}>{avgRating}</span>
         </label>
         <label>{slaString}</label>
         <label>{costForTwoString}</label>

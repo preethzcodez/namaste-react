@@ -1,56 +1,55 @@
-# NAMASTE REACT - ASSIGNMENT 06 - EXPLORING THE WORLD
+# NAMASTE REACT - ASSIGNMENT 07 - FINDING THE PATH
 
 ## CODING
-- Play with the useEffect Hook to see when it is called?(before or after render)
-- Play with dependency array in useEffect Hook
-- Play with the developer console by putting a debugger in render and useEffect
-- Call an actual API to get data
-- Handle Error in your API call
-- Build Shimmer UI when data in not loaded
-- Render your UI with actual API data
-- Make Search functionality work
-- Make a Login Logout button which toggles with a state
+- Add Shimmer Effect without installing a library
+- Install react-router-dom
+- Create a appRouter and Provide it to the app
+- Create a Home, About, Contact Page with Link (use child routes)
+- Make a Error page for routing errors
+- Create a Restaurant Page with dynamic restaurant ID
+- (Extra) - Create a login Page using Formik Library
 
 ## THEORY
 
-### 01. What is a Microservice?
-Microservice is an architectural style that structures an application as a collection of small, independent services that communicate with each other, rather than as a single, monolithic application.
+### 01. What are various ways to add images into our App? Explain with code examples
+There are several ways to add images in a React App:
 
-### 02. What is Monolith architecture?
-Monolith architecture is a traditional way of building software applications as a single, tightly-coupled unit, rather than as a collection of loosely-coupled services.
+Using an image file:
+```<img src="image.jpg" alt="image description" />```
 
-### 03. What is the difference between Monolith and Microservice?
-The difference between Monolith and Microservice is that Monolith is a single, tightly-coupled unit whereas Microservice is a collection of loosely-coupled services. Microservices are designed to be small, autonomous and independently deployable.
+Using a CSS background-image:
+```<div style={{backgroundImage: 'url(image.jpg)'}} />```
 
-### 04. Why do we need a useEffect Hook?
-useEffect Hook is a React Hook that lets you synchronize a component with an external system. It lets you keep your component updated with new data from an API, user input, or other state changes.
+Using a data URL:
+```<img src="data:image/jpeg;base64,/9j/4AAQSkZ..." alt="image description" />```
 
-### 05. What is Optional Chaining?
-Optional Chaining is a new operator in JavaScript that allows you to access properties of an object without having to check if they exist first. It returns undefined if a property or function doesn't exist in the chain, instead of throwing an error.
-
-### 06. What is Shimmer UI?
-Shimmer UI is a UI component in React that's used to create a placeholder loading state for asynchronously loaded content. It provides a shimmering effect to indicate that something is loading, making the user experience better.
-
-### 07. What is the difference between JS expression and JS statement?
-The difference between a JS expression and a JS statement is that an expression returns a value, whereas a statement performs an action. For example, a = b * 2 is an expression, whereas if (a > b) {} is a statement.
-
-### 08. What is Conditional Rendering, explain with a code example
-Conditional Rendering is a way of conditionally displaying components in React based on certain conditions. A code example is:
+Importing an image:
 ```
-render() {
-  const isLoading = this.state.isLoading;
-  return (
-    <div>
-      {isLoading ? <Loading /> : <Content />}
-    </div>
-  );
-}
+import image from './image.jpg';
+
+<img src={image} alt="image description" />
 ```
-### 09. What is CORS?
-CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that restricts requests made from one domain to another. It prevents a web page from making requests to a different domain than the one that served the web page.
 
-### 10. What is async and await?
-async and await are JavaScript keywords that allow you to write asynchronous code that is easier to read and write than traditional callback-based code. async makes a function return a Promise and await allows you to wait for the result of a Promise.
+Using a React Component:
+```
+const Image = () => <img src="image.jpg" alt="image description" />;
 
-### 11. What is the use of `const json = await data.json();` in getRestaurants()
-```const json = await data.json();``` in the function getRestaurants() is used to wait for the response from a server in the form of a JSON string and parse it into a JavaScript object. The await keyword stops execution of the function until the Promise is resolved and the data is available.
+<Image />
+```
+
+### 02. What would happen if we do console.log(useState())?
+Console.log of useState: It will return an array with two elements, the first being the current state value, and the second being a function to update the state.
+Example: ```console.log(useState())```
+Output: ```[undefined, function updateState]```
+
+### 03. How will useEffect behave if we don't add a dependency array ?
+useEffect without dependencies: If no dependencies are passed in the dependency array, useEffect will run on every render. This can lead to performance issues and is not recommended.
+Example: ```useEffect(() => {console.log("Effect ran")})```
+
+### 04. What is SPA?
+SPA (Single Page Application): It is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the server, instead of loading entire new pages from a server.
+
+### 05. What is difference between Client Side Routing and Server Side Routing?
+Client Side Routing vs Server Side Routing:
+- Client Side Routing: It is a technique where the routing is handled on the client side using JavaScript, it updates the URL and dynamically renders the appropriate components or pages based on the URL change.
+- Server Side Routing: It is a technique where the routing is handled on the server side, whenever a URL is requested, the server sends the full HTML content of the page corresponding to the URL.

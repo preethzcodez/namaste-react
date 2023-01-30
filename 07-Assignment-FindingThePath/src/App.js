@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import RestaurantDetail from "./components/restaurant-detail/RestaurantDetail";
 import Error from "./components/error-page/Error";
+import Login from "./components/login/Login";
 
 const App = () => {
   return (
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         path: "/restaurant/:id",
         element: <RestaurantDetail />,
       },
+      {
+        path: "/login",
+        element: <Login />,
+      }
     ],
   },
 ]);

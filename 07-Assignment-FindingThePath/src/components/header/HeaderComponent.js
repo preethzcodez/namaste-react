@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
-  const [isLoggedIn, setLogin] = useState(false);
-
   return (
     <div className="nav-bar">
       <img src={logo} className="logo" alt="logo" />
@@ -23,9 +21,9 @@ const HeaderComponent = () => {
           </li>
           <li>Cart</li>
         </ul>
-        <button onClick={() => setLogin(!isLoggedIn)}>
-          {isLoggedIn ? "Logout" : "Login"}
-        </button>
+        <Link to="/login">
+          <button>Login</button>
+        </Link>
       </div>
     </div>
   );
