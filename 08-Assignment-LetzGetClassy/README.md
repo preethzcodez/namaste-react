@@ -19,77 +19,41 @@
 ### 01. How do you create nested routes react-router-dom configuration?
 
 ```
-
 const router = createBrowserRouter([
-
-{
-
-path: "/",
-
-element: <App />,
-
-errorElement: <Error />,
-
-children: [
-
-{
-
-path: "/",
-
-element: <Home />,
-
-},
-
-{
-
-path: "/about",
-
-element: <About />,
-
-children: [
-
-{
-
-path: "profile",
-
-element: <Profile />,
-
-}
-
-]
-
-},
-
-{
-
-path: "/contact",
-
-element: <Contact />,
-
-},
-
-{
-
-path: "/restaurant/:id",
-
-element: <RestaurantDetail />,
-
-},
-
-{
-
-path: "/login",
-
-element: <Login />,
-
-}
-
-],
-
-},
-
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          }
+        ]
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <RestaurantDetail />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      }
+    ],
+  },
 ]);
-
 ```
 
 ### 02. createHashRouter, createMemoryRouter
