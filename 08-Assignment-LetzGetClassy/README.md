@@ -67,105 +67,60 @@ This router is useful if you are unable to configure your web server to direct a
 Instead of using the browsers history a memory router manages it's own history stack in memory. It's primarily useful for testing and component development tools like Storybook, but can also be used for running React Router in any non-browser environment.
 
 ```
-
 import {
-
-RouterProvider,
-
-createMemoryRouter,
-
+  RouterProvider,
+  createMemoryRouter,
 } from "react-router-dom";
-
 import * as React from "react";
-
 import {
-
-render,
-
-waitFor,
-
-screen,
-
+  render,
+  waitFor,
+  screen,
 } from "@testing-library/react";
-
 import "@testing-library/jest-dom";
-
 import CalendarEvent from "./routes/event";
 
-
-
 test("event route", async () => {
+  const FAKE_EVENT = { name: "test event" };
+  const routes = [
+    {
+      path: "/events/:id",
+      element: <CalendarEvent />,
+      loader: () => FAKE_EVENT,
+    },
+  ];
 
-const FAKE_EVENT = { name: "test event" };
+  const router = createMemoryRouter(routes, {
+    initialEntries: ["/", "/events/123"],
+    initialIndex: 1,
+  });
 
-const routes = [
+  render(<RouterProvider router={router} />);
 
-{
-
-path: "/events/:id",
-
-element: <CalendarEvent />,
-
-loader: () => FAKE_EVENT,
-
-},
-
-];
-
-
-
-const router = createMemoryRouter(routes, {
-
-initialEntries: ["/", "/events/123"],
-
-initialIndex: 1,
-
+  await waitFor(() => screen.getByRole("heading"));
+  expect(screen.getByRole("heading")).toHaveTextContent(
+    FAKE_EVENT.name
+  );
 });
-
-
-
-render(<RouterProvider router={router} />);
-
-
-
-await waitFor(() => screen.getByRole("heading"));
-
-expect(screen.getByRole("heading")).toHaveTextContent(
-
-FAKE_EVENT.name
-
-);
-
-});
-
 ```
 
 **initialEntries**
 The initial entries in the history stack. This allows you to start a test (or an app) with multiple locations already in the history stack (for testing a back navigation, etc.)
 
 ```
-
 createMemoryRouter(routes, {
-
-initialEntries: ["/", "/events/123"],
-
+  initialEntries: ["/", "/events/123"],
 });
-
 ```
 
 **initialIndex**
 The initial index in the history stack to render. This allows you to start a test at a specific entry. It defaults to the last entry in initialEntries.
 
 ```
-
 createMemoryRouter(routes, {
-
-initialEntries: ["/", "/events/123"],
-
-initialIndex: 1, // start at "/events/123"
-
+  initialEntries: ["/", "/events/123"],
+  initialIndex: 1, // start at "/events/123"
 });
-
 ```
 
 ### 03. What is the order of life cycle method calls in class based components
