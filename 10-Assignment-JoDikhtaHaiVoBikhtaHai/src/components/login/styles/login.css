@@ -1,0 +1,35 @@
+@tailwind components;
+@layer components {
+  .login-form-container {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: theme(colors.white);
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .login-button {
+    background-color: theme(colors.yellow);
+    color: theme(colors.white);
+    border: none;
+    border-radius: 4px;
+    min-height: 40px;
+    min-width: 450px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .login-button:hover {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px #efad0175;
+  }
+}
