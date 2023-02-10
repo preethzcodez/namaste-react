@@ -9,10 +9,6 @@
     font-family: theme(fontFamily.roboto);
   }
 
-  #root {
-    height: 100vh;
-  }
-
   h1 {
     font-size: 2em;
     font-weight: bold;
@@ -20,6 +16,10 @@
 }
 
 @layer components {
+  #root {
+    height: 100vh;
+  }
+
   .nav-bar {
     min-height: 100px;
     background: linear-gradient(45deg, theme(colors.yellow), #ffca00);
