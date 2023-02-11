@@ -19,4 +19,4 @@ Lifting the state up refers to the process of moving state data from a lower-lev
 ### 03. What is Context Provider and Context Consumer?
 Context Provider and Context Consumer are React components that allow for global state management. The Provider component provides a value that can be accessed by the Consumer component and its descendants.
 ### 04. If you don’t pass a value to the provider does it take the default value?
-If you don't pass a value to the Provider component, it will use the default value specified in the createContext() method.
+The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This default value can be helpful for testing components in isolation without wrapping them. Note: passing undefined as a Provider value does not cause consuming components to use defaultValue.
