@@ -1,0 +1,112 @@
+@tailwind components;
+@layer components {
+  .restaurant-detail-banner {
+    background-color: #171a29;
+    height: 245px;
+    color: theme(colors.white);
+    font-weight: 300;
+  }
+
+  .restaurant-detail-container {
+    display: table;
+    margin: 0 auto;
+    padding: 0px 20px;
+    height: 100%;
+  }
+
+  .restaurant-detail-image-container {
+    display: table-cell;
+    width: 254px;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 165px;
+  }
+
+  .restaurant-image {
+    width: 100%;
+    height: inherit;
+  }
+
+  .restaurant-details {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 0 55px;
+  }
+
+  .restaurant-details > h1 {
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .restaurant-detail-text {
+    opacity: 0.7;
+    display: block;
+  }
+
+  .restaurant-detail-rating-container {
+    display: inline-block;
+    margin-top: 21px;
+  }
+
+  .restaurant-detail-rating-container-maintext {
+    font-weight: 600;
+    font-size: 16px !important;
+  }
+
+  .restaurant-detail-rating-container-subtext {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.7;
+    display: block;
+  }
+
+  .restaurant-menu-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .restaurant-menu-card {
+    display: flex;
+    width: 49%;
+    padding: 20px;
+    margin: 5px;
+    background-color: theme(colors.white);
+    justify-content: space-between;
+  }
+
+  .restaurant-menu-details-container {
+    display: block;
+    width: 100%;
+    padding-right: 8px;
+  }
+
+  .restaurant-menu-image-container {
+    background-color: theme(colors.backgroundGray);
+    height: 100px;
+    min-width: 129px;
+    overflow: hidden;
+  }
+
+  .restaurant-menu-card-title {
+    color: #3e4152;
+    font-weight: 500;
+    font-size: 1.22rem;
+    word-break: break-word;
+  }
+
+  .restaurant-menu-card-price {
+    color: #3e4152;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  .restaurant-menu-card-description {
+    color: rgba(40, 44, 63, 0.45);
+    font-size: 1rem;
+    margin-top: 14px;
+  }
+}
